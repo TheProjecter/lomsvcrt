@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoMsvcrt", "LoMsvcrt2010.vcxproj", "{4A27C6DC-2B93-4C19-AE9E-5FA1EC617AE9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoMsvcrtTestExe", "LoMsvcrtTestExe\LoMsvcrtTestExe.vcxproj", "{DD87E3D5-7ED6-4A07-9373-35FDF0A4CCCD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoHelloWorld", "LoHelloWorld\LoHelloWorld.vcxproj", "{BE2C3508-F720-432C-92CB-85A8354B7BD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A27C6DC-2B93-4C19-AE9E-5FA1EC617AE9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A27C6DC-2B93-4C19-AE9E-5FA1EC617AE9}.Debug|Win32.Build.0 = Debug|Win32
+		{4A27C6DC-2B93-4C19-AE9E-5FA1EC617AE9}.Release|Win32.ActiveCfg = Release|Win32
+		{4A27C6DC-2B93-4C19-AE9E-5FA1EC617AE9}.Release|Win32.Build.0 = Release|Win32
+		{DD87E3D5-7ED6-4A07-9373-35FDF0A4CCCD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD87E3D5-7ED6-4A07-9373-35FDF0A4CCCD}.Debug|Win32.Build.0 = Debug|Win32
+		{DD87E3D5-7ED6-4A07-9373-35FDF0A4CCCD}.Release|Win32.ActiveCfg = Release|Win32
+		{DD87E3D5-7ED6-4A07-9373-35FDF0A4CCCD}.Release|Win32.Build.0 = Release|Win32
+		{BE2C3508-F720-432C-92CB-85A8354B7BD0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BE2C3508-F720-432C-92CB-85A8354B7BD0}.Debug|Win32.Build.0 = Debug|Win32
+		{BE2C3508-F720-432C-92CB-85A8354B7BD0}.Release|Win32.ActiveCfg = Release|Win32
+		{BE2C3508-F720-432C-92CB-85A8354B7BD0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{1579d415-fc4d-4d57-94ed-959d66bc339f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_initterm_e.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdLibC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wmain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wWinMain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdlib2010.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_dbgrpt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="StdLibX86.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoMsvcrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="libcpmt9.rsp">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MSVCRT.DEF">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ehprolg3.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ehvecctr.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ehvecdtr.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="libcpmt.bat">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sehprolg.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sehprolg4.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sehprolg4gs.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sehsupp.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="loadcfg.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="_stack_.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="_init_.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="_error_.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="_userapi_.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+    <CustomBuild Include="_pdblkup_.rsp">
+      <Filter>External</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
