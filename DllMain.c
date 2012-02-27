@@ -1,3 +1,8 @@
+/*
+ * Copyright © 2012, MuThink Inc, All rights reserved.
+ * http://www.muthink.com
+ * Copying and distribution of this product is forbidden without direct permission from MuThink Inc.
+ */
 /*!
 \file DllMain.c
 \brief CRT initialization for a DLL using the MSVCRT* model of C run-time

@@ -1,3 +1,8 @@
+/*
+ * Copyright © 2012, MuThink Inc, All rights reserved.
+ * http://www.muthink.com
+ * Copying and distribution of this product is forbidden without direct permission from MuThink Inc.
+ */
 /*!
 \file StdLib.c
 \brief Standard helper functions when compiling with MSVC from version 6.0.

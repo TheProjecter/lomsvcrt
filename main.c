@@ -1,3 +1,8 @@
+/*
+ * Copyright © 2012, MuThink Inc, All rights reserved.
+ * http://www.muthink.com
+ * Copying and distribution of this product is forbidden without direct permission from MuThink Inc.
+ */
 /*!
 \file main.c
 \brief Initialization for console EXE using CRT DLL.
