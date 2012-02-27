@@ -21,7 +21,7 @@ $URL:  $
 #endif  /* MRTDLL */
 
 #undef _CRTIMP
-#define  _DLL
+//#define  _DLL
 
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
@@ -437,6 +437,65 @@ __int64 _strtoi64( const char *nptr, char **endptr, int base )
 
 	if (endptr != NULL )	*endptr = (char *)nptr;
 	return retval*((start == '-' ? -1 : 1));
+}
+
+#include <wchar.h>
+
+wchar_t *wcsncpy( wchar_t *strDest, const wchar_t *strSource, size_t count )
+{
+	return lstrcpynW( strDest, strSource, count );
+}
+
+int _wfindnexti64( intptr_t handle, struct _wfinddata64_t *fileinfo );
+
+int _wfindnext64i32( intptr_t handle, struct _wfinddata64i32_t *fileinfo )
+{
+	struct _wfinddata64_t	f;
+	int retval = _wfindnexti64( handle, &f );
+	fileinfo->attrib = f.attrib;
+	fileinfo->size = (_fsize_t)f.size;
+	fileinfo->time_access = f.time_access;
+	fileinfo->time_create = f.time_create;
+	fileinfo->time_write = f.time_write;
+	wcsncpy( fileinfo->name, f.name, MAX_PATH );
+	return retval;
+}
+
+intptr_t _wfindfirst64i32( const wchar_t *filespec, struct _wfinddata64i32_t *fileinfo )
+{
+	struct _wfinddata64_t	f;
+	intptr_t retval = _wfindfirsti64( filespec, &f );
+	if(retval != -1)
+	{
+		fileinfo->attrib = f.attrib;
+		fileinfo->size = (_fsize_t)f.size;
+		fileinfo->time_access = f.time_access;
+		fileinfo->time_create = f.time_create;
+		fileinfo->time_write = f.time_write;
+		wcsncpy( fileinfo->name, f.name, MAX_PATH );
+	}
+	return retval;
+}
+
+int _fstat64i32( int fd, struct _stat64i32 *buffer )
+{
+	struct _stat64 s;
+	int retval = _fstati64( fd, &s );
+	if(!retval )
+	{
+		buffer->st_atime = s.st_atime;
+		buffer->st_ctime = s.st_ctime;
+		buffer->st_dev = s.st_dev;
+		buffer->st_gid = s.st_gid;
+		buffer->st_ino = s.st_ino;
+		buffer->st_mode = s.st_mode;
+		buffer->st_mtime = s.st_mtime;
+		buffer->st_nlink = s.st_nlink;
+		buffer->st_rdev = s.st_rdev;
+		buffer->st_size = (_off_t)s.st_size;
+		buffer->st_uid = s.st_uid;
+	}
+	return retval;
 }
 
 /*! @} */
