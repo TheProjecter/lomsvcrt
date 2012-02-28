@@ -498,4 +498,36 @@ int _fstat64i32( int fd, struct _stat64i32 *buffer )
 	return retval;
 }
 
+void Utf8ToUtf16( const char *input, wchar_t *output, int maxLength )
+{
+	MultiByteToWideChar( CP_UTF8, 0, input, -1, output, maxLength );
+}
+
+// Utf-8 version of fopen
+FILE * fopen ( const char * fileName, const char * mode )
+{
+	wchar_t	path[512];
+	wchar_t wmode[20];
+	Utf8ToUtf16( fileName, path, _countof(path));
+	Utf8ToUtf16( mode, wmode, _countof(wmode));
+	return _wfopen( path, wmode ); 
+}
+
+// Utf-8 version of fopen
+FILE * __cdecl freopen ( const char * fileName, const char * mode, FILE *stream )
+{
+	wchar_t	path[512];
+	wchar_t wmode[20];
+	Utf8ToUtf16( fileName, path, _countof(path));
+	Utf8ToUtf16(mode,wmode, _countof(wmode));
+	return _wfreopen( path, wmode, stream ); 
+}
+
+int remove( const char *fileName )
+{
+	wchar_t	path[512];
+	Utf8ToUtf16( fileName, path, _countof(path));
+	return _wremove(path);
+}
+
 /*! @} */

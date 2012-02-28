@@ -621,7 +621,7 @@ EXPORTS
        fgetws
        floor
        fmod
-       fopen
+       ; fopen
        fprintf
        fputc
        fputs
@@ -629,7 +629,7 @@ EXPORTS
        fputws
        fread
        free
-       freopen
+       ;freopen
        frexp
        fscanf
        fseek
@@ -702,7 +702,7 @@ EXPORTS
        raise
        rand
        realloc
-       remove
+       ;remove
        rename
        rewind
        scanf
